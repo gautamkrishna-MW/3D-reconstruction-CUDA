@@ -1,0 +1,67 @@
+# CompilerName=msvcpp160
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root\build\win64
+matlabdir = C:\Program Files\MATLAB\R2022b
+startdir = D:\CMR Surgicals\Codes\3dRecons\matlabSGM\gpuImpl_v2
+
+# Toolchain information
+cc = cl
+cxx = cl
+linker = link
+linkerxx = link
+
+cflags =  /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "$matlabdir\sys\cuda\win64\cuda\include" /I "." -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  
+
+cxxflags =   /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "$matlabdir\sys\cuda\win64\cuda\include" /I "." -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  
+
+ldflags =  -Xlinker /nologo -Xlinker /manifest -Xlinker /DLL -L"$matlabdir\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib libMatlabDataArray.lib libMatlabEngine.lib   libemlrt.lib libcovrt.lib libut.lib libmwmathutil.lib cuda.lib -arch sm_75  -I"$matlabdir\sys\cuda\win64\cuda\include" -L"$matlabdir\sys\cuda\win64\cuda\lib\x64" -L"$matlabdir\bin\win64" cudart.lib cublas.lib cusolver.lib cufft.lib curand.lib cusparse.lib -Xnvlink -w  -Wno-deprecated-gpu-targets -Xlinker /NODEFAULTLIB:libcmt.lib
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in /Fo$out
+
+rule cxx
+    command = $cxx $cxxflags $in /Fo$out
+
+rule link
+    command = $linker @$out.rsp $linkobjs $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldflags
+
+cudac = nvcc
+linkercuda = nvcc
+
+cudaflags =  -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler "/wd 4819" -Xcompiler "/MD" -Xcudafe "--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler "/EHa" -noprof -ldir "$matlabdir/bin/win64" -Xcompiler "/utf-8" -I "$root" -I "$startdir" -I "$root\interface" -I "$matlabdir\extern\include" -I "$matlabdir\sys\cuda\win64\cuda\include" -I "." -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I "$matlabdir/simulink/include" -I "$matlabdir/toolbox/shared/simtargets"
+rule cudac
+    command = $cudac $cudaflags $in -o $out
+
+rule linkcuda
+    command = $linkercuda $linkobjs $ldflags -o $out $in
+
+# Build
+build $builddir\disparitySGMWrapperCuda.obj : cudac $root\disparitySGMWrapperCuda.cpp
+build $builddir\gpudisparitySGM_mw_ptx.obj : cudac $root\gpudisparitySGM_mw_ptx.cu
+build $builddir\gpudisparitySGMCost_mw_ptx.obj : cudac $root\gpudisparitySGMCost_mw_ptx.cu
+build $builddir\MWPtxUtils.obj : cudac $root\MWPtxUtils.cpp
+build $builddir\generateScene3DGpuImpl_data.obj : cudac $root\generateScene3DGpuImpl_data.cu
+build $builddir\rt_nonfinite.obj : cudac $root\rt_nonfinite.cu
+build $builddir\generateScene3DGpuImpl_initialize.obj : cudac $root\generateScene3DGpuImpl_initialize.cu
+build $builddir\generateScene3DGpuImpl_terminate.obj : cudac $root\generateScene3DGpuImpl_terminate.cu
+build $builddir\generateScene3DGpuImpl.obj : cudac $root\generateScene3DGpuImpl.cu
+build $builddir\_coder_generateScene3DGpuImpl_api.obj : cudac $root\interface\_coder_generateScene3DGpuImpl_api.cu
+build $builddir\_coder_generateScene3DGpuImpl_mex.obj : cudac $root\interface\_coder_generateScene3DGpuImpl_mex.cu
+build $builddir\_coder_generateScene3DGpuImpl_info.obj : cxx $root\interface\_coder_generateScene3DGpuImpl_info.cpp
+build $builddir\MWMemoryManager.obj : cudac $root\MWMemoryManager.cpp
+build $builddir\cpp_mexapi_version.obj : cudac $root\cpp_mexapi_version.cpp
+
+# Link
+build $root\gpuMEX.mexw64 : linkcuda $builddir\disparitySGMWrapperCuda.obj $builddir\gpudisparitySGM_mw_ptx.obj $builddir\gpudisparitySGMCost_mw_ptx.obj $builddir\MWPtxUtils.obj $builddir\generateScene3DGpuImpl_data.obj $builddir\rt_nonfinite.obj $builddir\generateScene3DGpuImpl_initialize.obj $builddir\generateScene3DGpuImpl_terminate.obj $builddir\generateScene3DGpuImpl.obj $builddir\_coder_generateScene3DGpuImpl_api.obj $builddir\_coder_generateScene3DGpuImpl_mex.obj $builddir\_coder_generateScene3DGpuImpl_info.obj $builddir\MWMemoryManager.obj $builddir\cpp_mexapi_version.obj 

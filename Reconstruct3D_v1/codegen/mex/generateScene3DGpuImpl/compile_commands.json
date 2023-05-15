@@ -1,0 +1,86 @@
+[
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" disparitySGMWrapperCuda.cpp -o build\\win64\\disparitySGMWrapperCuda.obj",
+    "file": "disparitySGMWrapperCuda.cpp",
+    "output": "build/win64/disparitySGMWrapperCuda.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" gpudisparitySGM_mw_ptx.cu -o build\\win64\\gpudisparitySGM_mw_ptx.obj",
+    "file": "gpudisparitySGM_mw_ptx.cu",
+    "output": "build/win64/gpudisparitySGM_mw_ptx.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" gpudisparitySGMCost_mw_ptx.cu -o build\\win64\\gpudisparitySGMCost_mw_ptx.obj",
+    "file": "gpudisparitySGMCost_mw_ptx.cu",
+    "output": "build/win64/gpudisparitySGMCost_mw_ptx.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" MWPtxUtils.cpp -o build\\win64\\MWPtxUtils.obj",
+    "file": "MWPtxUtils.cpp",
+    "output": "build/win64/MWPtxUtils.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" generateScene3DGpuImpl_data.cu -o build\\win64\\generateScene3DGpuImpl_data.obj",
+    "file": "generateScene3DGpuImpl_data.cu",
+    "output": "build/win64/generateScene3DGpuImpl_data.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" rt_nonfinite.cu -o build\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.cu",
+    "output": "build/win64/rt_nonfinite.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" generateScene3DGpuImpl_initialize.cu -o build\\win64\\generateScene3DGpuImpl_initialize.obj",
+    "file": "generateScene3DGpuImpl_initialize.cu",
+    "output": "build/win64/generateScene3DGpuImpl_initialize.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" generateScene3DGpuImpl_terminate.cu -o build\\win64\\generateScene3DGpuImpl_terminate.obj",
+    "file": "generateScene3DGpuImpl_terminate.cu",
+    "output": "build/win64/generateScene3DGpuImpl_terminate.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" generateScene3DGpuImpl.cu -o build\\win64\\generateScene3DGpuImpl.obj",
+    "file": "generateScene3DGpuImpl.cu",
+    "output": "build/win64/generateScene3DGpuImpl.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" interface\\_coder_generateScene3DGpuImpl_api.cu -o build\\win64\\_coder_generateScene3DGpuImpl_api.obj",
+    "file": "interface/_coder_generateScene3DGpuImpl_api.cu",
+    "output": "build/win64/_coder_generateScene3DGpuImpl_api.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" interface\\_coder_generateScene3DGpuImpl_mex.cu -o build\\win64\\_coder_generateScene3DGpuImpl_mex.obj",
+    "file": "interface/_coder_generateScene3DGpuImpl_mex.cu",
+    "output": "build/win64/_coder_generateScene3DGpuImpl_mex.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" /I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" /I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H   interface\\_coder_generateScene3DGpuImpl_info.cpp /Fobuild\\win64\\_coder_generateScene3DGpuImpl_info.obj",
+    "file": "interface/_coder_generateScene3DGpuImpl_info.cpp",
+    "output": "build/win64/_coder_generateScene3DGpuImpl_info.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" MWMemoryManager.cpp -o build\\win64\\MWMemoryManager.obj",
+    "file": "MWMemoryManager.cpp",
+    "output": "build/win64/MWMemoryManager.obj"
+  },
+  {
+    "directory": "D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\\codegen\\mex\\generateScene3DGpuImpl",
+    "command": "nvcc -c -rdc=true -Wno-deprecated-gpu-targets -Xcompiler \"/wd 4819\" -Xcompiler \"/MD\" -Xcudafe \"--display_error_number --diag_suppress=2381 --diag_suppress=unsigned_compare_with_zero --diag_suppress=useless_type_qualifier_on_return_type\" -D_GNU_SOURCE -DMATLAB_MEX_FILE --no-exceptions -Xcompiler \"/EHa\" -noprof -ldir \"C:\\Program Files\\MATLAB\\R2022b/bin/win64\" -Xcompiler \"/utf-8\" -I \".\" -I \"D:\\CMR Surgicals\\Codes\\3dRecons\\matlabSGM\\gpuImpl_v2\" -I \".\\interface\" -I \"C:\\Program Files\\MATLAB\\R2022b\\extern\\include\" -I \"C:\\Program Files\\MATLAB\\R2022b\\sys\\cuda\\win64\\cuda\\include\" -I \".\" -DMW_CUDA_ARCH=750 -DMW_GPU_MEMORY_MANAGER -DMODEL=gpuMEX -DMW_NEEDS_VERSION_H  -arch sm_75  -I \"C:\\Program Files\\MATLAB\\R2022b/simulink/include\" -I \"C:\\Program Files\\MATLAB\\R2022b/toolbox/shared/simtargets\" cpp_mexapi_version.cpp -o build\\win64\\cpp_mexapi_version.obj",
+    "file": "cpp_mexapi_version.cpp",
+    "output": "build/win64/cpp_mexapi_version.obj"
+  }
+]
